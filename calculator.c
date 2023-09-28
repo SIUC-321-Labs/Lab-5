@@ -17,27 +17,43 @@ int main(){
     switch (choice) {
         case 1:
             printf("Enter two numbers: ");
-            scanf("%lf %lf", &a, &b);
-            result = add(a, b);
-            printf("Result: %.2lf\n", result);
+            if(scanf("%lf %lf", &a, &b) == 2){
+                result = add(a, b);
+                printf("Result: %.2lf\n", result);
+            }
+            else{
+                printf("Not a valid number!\n");
+            }
             break;
         case 2:
             printf("Enter two numbers: ");
-            scanf("%lf %lf", &a, &b);
-            result = subtract(a, b);
-            printf("Result: %.2lf\n", result);
+            if(scanf("%lf %lf", &a, &b) == 2){
+                result = subtract(a, b);
+                printf("Result: %.2lf\n", result);
+            }
+            else{
+                printf("Not a valid number!\n");
+            }
             break;
         case 3:
             printf("Enter two numbers: ");
-            scanf("%lf %lf", &a, &b);
-            result = multiply(a, b);
-            printf("Result: %.2lf\n", result);
+            if(scanf("%lf %lf", &a, &b) == 2){
+                result = multiply(a, b);
+                printf("Result: %.2lf\n", result);
+            }
+            else{
+                printf("Not a valid number!\n");
+            }
             break;
         case 4:
             printf("Enter two numbers: ");
-            scanf("%lf %lf", &a, &b);
-            result = divide(a, b);
-            printf("Result: %.2lf\n", result);
+            if(scanf("%lf %lf", &a, &b) == 2){
+                result = divide(a, b);
+                printf("Result: %.2lf\n", result);
+            }
+            else{
+                printf("Not a valid number!\n");
+            }
             break;
         default:
             printf("Invalid choice!\n");
