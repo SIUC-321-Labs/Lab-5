@@ -7,10 +7,43 @@ double multiply(double a, double b);
 double divide(double a, double b);
 
 int main(){
-    double a = 12, b = 3, results;
+    double a, b, result;
+    int choice;
 
-    results = divide(a, b);
-    printf("%lf\n", results);
+    printf("Select operation:\n");
+    printf("1: Add\n2: Subtract\n3: Multiply\n4: Divide\n");
+    scanf("%d", &choice);
+
+    switch (choice) {
+        case 1:
+            printf("Enter two numbers: ");
+            scanf("%lf %lf", &a, &b);
+            result = add(a, b);
+            printf("Result: %.2lf\n", result);
+            break;
+        case 2:
+            printf("Enter two numbers: ");
+            scanf("%lf %lf", &a, &b);
+            result = subtract(a, b);
+            printf("Result: %.2lf\n", result);
+            break;
+        case 3:
+            printf("Enter two numbers: ");
+            scanf("%lf %lf", &a, &b);
+            result = multiply(a, b);
+            printf("Result: %.2lf\n", result);
+            break;
+        case 4:
+            printf("Enter two numbers: ");
+            scanf("%lf %lf", &a, &b);
+            result = divide(a, b);
+            printf("Result: %.2lf\n", result);
+            break;
+        default:
+            printf("Invalid choice!\n");
+    }
+
+    return 0;
 
 }
 
