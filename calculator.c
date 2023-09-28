@@ -10,10 +10,14 @@ int main(){
     double a, b, result;
     int choice;
 
+    // Ask user to pick a value for what arithmetic they want to perform
     printf("Select operation:\n");
     printf("1: Add\n2: Subtract\n3: Multiply\n4: Divide\n");
     scanf("%d", &choice);
 
+    // Uses a switch case for what value the user has entered
+    // Each case has error handling to make sure user enters two valid numbers
+    // prints results, breaks, then ends program
     switch (choice) {
         case 1:
             printf("Enter two numbers: ");
@@ -63,18 +67,22 @@ int main(){
 
 }
 
+// Takes two inputs adds them together and returns value
 double add(double a, double b) {
     return a + b;
 }
 
+// Takes two inputs subtracts them and returns value
 double subtract(double a, double b) {
     return a - b;
 }
 
+// Takes two inputs multiples them and returns value
 double multiply(double a, double b) {
     return a * b;
 }
 
+// Takes two inputs makes sure b does not equal zero then divides them and returns value
 double divide(double a, double b) {
     if (b != 0) {
         return a / b;
