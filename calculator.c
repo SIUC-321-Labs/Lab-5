@@ -4,11 +4,12 @@
 double add(double a, double b);
 double subtract(double a, double b);
 double multiply(double a, double b);
+double divide(double a, double b);
 
 int main(){
-    double a = 3, b = 4, results;
+    double a = 12, b = 3, results;
 
-    results = multiply(a, b);
+    results = divide(a, b);
     printf("%lf\n", results);
 
 }
@@ -23,4 +24,13 @@ double subtract(double a, double b) {
 
 double multiply(double a, double b) {
     return a * b;
+}
+
+double divide(double a, double b) {
+    if (b != 0) {
+        return a / b;
+    } else {
+        printf("Error: Division by zero.\n");
+        return 0;
+    }
 }
